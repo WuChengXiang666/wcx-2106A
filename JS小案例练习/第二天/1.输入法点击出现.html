@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box {
+      width: 200px;
+      height: 200ex;
+      margin: 0 auto;
+    }
+
+    .box #list {
+      list-style: none;
+      display: none;
+    }
+
+    li {
+      width: 50px;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box">
+    <input type="button" value="点击输入法" id="btn">
+    <ul id="list">
+      <li>中文</li>
+      <li>英文</li>
+      <li id="save">关闭</li>
+    </ul>
+  </div>
+</body>
+<script>
+  window.onload = function () {
+    var aBtn = document.getElementById("btn")
+    var aList = document.getElementById("list")
+    var aLi = document.getElementsByTagName("li")
+    var aSave = document.getElementById("save")
+
+    aSave.onclick = function () {
+      aList.style.display = "none"
+    }
+    aBtn.onclick = function () {
+      if (aList.style.display != "block") {
+        aList.style.display = "block"
+      } else {
+        aSave.onclick()
+      }
+    }
+    for (var i = 0; i < aLi.length; i++) {
+      aLi[i].onmousemove = function () {
+        this.style.background = "skyblue"
+      }
+      aLi[i].onmouseout = function () {
+        this.style.background = ""
+      }
+    }
+  }
+</script>
+
+</html>

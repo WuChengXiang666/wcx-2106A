@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    div {
+      border: 1px solid red;
+      padding: 10px;
+      width: 300px;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    alert(typeof 123456) //number类型
+    alert(typeof 'abc') //字符串类型
+    alert(typeof document) //object类型
+  </div>
+</body>
+<script>
+  window.onload = function () {
+    alert("typeof 123456 >" + '\u2192' + typeof 123456 + "\n\ntypeof\"abc\">" + typeof "abc" +
+      "\n\ntypeof document >" + typeof document)
+  }
+</script>
+
+</html>

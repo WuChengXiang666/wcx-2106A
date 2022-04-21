@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style lang="scss">
+  #ul,
+  #tab {
+    /* text-align: center; */
+    padding: 0;
+    margin: 0;
+    width: 300px;
+    height: 30px;
+    margin: 0 auto;
+    clear: both;
+    cursor: pointer;
+
+  }
+
+  #ul {
+    display: flex;
+  }
+
+  #ul li {
+    list-style: none;
+    font-weight: 700;
+  }
+
+  #red {
+    color: red;
+  }
+
+  #green {
+    color: green;
+  }
+
+  #blue {
+    color: skyblue;
+  }
+</style>
+
+<body id="boy">
+
+  <ul id="ul">
+    <li id="red">红</li>&emsp;
+    <li id="green" name="current">绿</li>&emsp;
+    <li id="blue">蓝</li>
+  </ul>
+  <table id="tab">
+    <tr>
+      <th>吃饭</th>
+      <th>敲代码</th>
+      <th>睡觉</th>
+      <th>娱乐</th>
+      <th>听歌</th>
+      </th>
+    </tr>
+  </table>
+</body>
+<script>
+  function changeBg(elem, attr, value) {
+    elem.style[attr] = value
+  }
+  window.onload = function () {
+    var aLi = document.getElementsByTagName("li")
+    var aBoy = document.getElementById("boy")
+    var aTab = document.getElementById("tab")
+    var aAtt = ["background"]
+    var aBoyBg = ["#ff0000", "#008000", "#87ceeb"]
+    var aTabBg = ["red", "green", "skyblue"]
+
+    for (var i = 0; i < aLi.length; i++) {
+      aLi[i].index = i
+      aLi[i].onclick = function () {
+        for (var x in aLi) aLi[x].className = ""
+        this.className = "current"
+
+        if (this.index == aLi.length - 1) {
+          changeBg(aBoy, aAtt[0], aBoyBg[2])
+          changeBg(aTab, aAtt[0], aTabBg[2])
+        } else {
+          changeBg(aBoy, aAtt[0], aBoyBg[this.index])
+          changeBg(aTab, aAtt[0], aTabBg[this.index])
+
+        }
+
+      }
+    }
+  }
+</script>
+
+</html>

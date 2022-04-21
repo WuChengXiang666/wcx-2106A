@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  #box {
+    width: 200px;
+    margin: 0 auto;
+  }
+</style>
+
+<body>
+  <div id="box">
+    <input type="text" name="mission" value="河南"></br>
+    <input type="text" name="mission" value="南阳"></br>
+    <input type="button" value="传参" onclick="btn()">
+  </div>
+</body>
+<script>
+  function btn() {
+    var box = document.getElementsByName('mission')
+    for (var i = 0; i < box.length; i++) {
+      alert(box[i].value)
+    }
+  }
+</script>
+
+</html>

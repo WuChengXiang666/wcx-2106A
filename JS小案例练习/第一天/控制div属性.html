@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>控制div属性</title>
+</head>
+<style>
+  #box {
+    width: 500px;
+    height: 500px;
+    text-align: center;
+    margin: 100px auto;
+
+  }
+
+  #box1 {
+    margin-top: 20px;
+    background-color: skyblue;
+    width: 100px;
+    height: 100px;
+
+  }
+</style>
+
+<body>
+  <div id="box">
+    <button onclick="a_width()">变宽</button>
+    <button onclick="a_heigth()">变高</button>
+    <button onclick="a_color()">变色</button>
+    <button onclick="a_hide()">隐藏</button>
+    <button onclick="a_reset()">重置</button>
+    <div id="box1">
+
+    </div>
+  </div>
+</body>
+<script>
+  var a = document.getElementById("box1")
+
+  function a_width() {
+    a.style.width = "300px"
+  }
+
+  function a_heigth() {
+    a.style.height = "300px"
+  }
+
+  function a_color() {
+    a.style.backgroundColor = "greenyellow"
+  }
+
+  function a_hide() {
+    a.style.visibility = "hidden"
+  }
+
+  function a_reset() {
+    a.style.cssText = ""
+  }
+</script>
+
+</html>

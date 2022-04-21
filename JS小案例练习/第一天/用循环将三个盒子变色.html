@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #box {
+      width: 500px;
+      margin: 100px auto;
+    }
+
+    .a {
+      background-color: blueviolet;
+      width: 100px;
+      height: 100px;
+      margin: 15px 10px 15px 10px;
+      float: right;
+
+    }
+  </style>
+  <script>
+    window.onload = function () {
+      var aDiv = document.getElementsByTagName("div")
+      alert(aDiv.index)
+      var aBtn = document.getElementById("btn")
+      aBtn.onclick = function () {
+        for (var i = 0; i < aDiv.length; i++) {
+          aDiv[i].style.background = "red"
+        }
+      }
+    }
+  </script>
+</head>
+
+
+<body>
+  <div id="box">
+    <input type="button" value="变色" id="btn"">
+    <div class=" a"></div>
+  <div class="a"></div>
+  <div class="a"></div>
+  </div>
+</body>
+
+</html>
